@@ -42,6 +42,12 @@ body {
     text-transform: capitalize;
 }
 
+.menu {
+    width: 60px;
+    display: flex;
+    align-items: center;
+}
+
 @media screen and (max-width: 468px) {
     .alto {
         height: calc(100vh - 8.5rem);

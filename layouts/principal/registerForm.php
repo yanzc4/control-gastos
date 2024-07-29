@@ -34,18 +34,18 @@
                     <p class="mt-2 text-sm text-gray-500">Por favor llene todos los campos</p>
                 </div>
 
-                <form class="mt-8 space-y-6" method="POST" id="frmRegistrar">
+                <div class="mt-8 space-y-6">
                     <div class="mt-8 content-center">
                         <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
                             Nombre
                         </label>
-                        <input class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-gray-500" type="text" placeholder="Ingrese su nombre">
+                        <input id="nombrerg" class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-gray-500" type="text" placeholder="Ingrese su nombre">
                     </div>
                     <div class="mt-8 content-center">
                         <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
                             Correo
                         </label>
-                        <input class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-gray-500" type="email" placeholder="mail@gmail.com">
+                        <input id="correorg" class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-gray-500" type="email" placeholder="mail@gmail.com">
                     </div>
                     <div class="relative">
                         <div class="absolute right-3 mt-4" id="rshowPassword">
@@ -66,15 +66,15 @@
                         <input onkeyup="comprobarSimilitud()" class=" w-full text-base px-4 py-2 border-b border-gray-300 focus:outline-none rounded-2xl focus:border-gray-500" type="password" id="rpassr" placeholder="Repita contraseña">
                     </div>
                     <div>
-                        <button type="button" class="w-full flex justify-center bg-gradient-to-r from-gray-400 to-gray-900  hover:bg-gradient-to-l hover:from-gray-500 hover:to-black text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer">
-                            Iniciar Sesión
+                        <button id="btnRegistrarse" type="button" class="w-full flex justify-center bg-gradient-to-r from-gray-400 to-gray-900  hover:bg-gradient-to-l hover:from-gray-500 hover:to-black text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer">
+                            Registrarse
                         </button>
                     </div>
                     <p class="flex flex-col items-center justify-center mt-10 text-center text-md text-gray-500">
                         <span>Estas registrado?</span>
                         <a type="button" onclick="cambiarFormulario()" class="text-gray-400 hover:text-gray-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Iniciar sesión</a>
                     </p>
-                </form>
+                </div>
 
             </div>
         </div>

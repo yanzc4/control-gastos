@@ -40,12 +40,12 @@
           <span class="h-px w-16 bg-gray-200"></span>
         </div>
 
-        <form class="mt-8 space-y-6" method="POST" id="frmLogin">
+        <div class="mt-8 space-y-6">
           <div class="mt-8 content-center">
             <label class="ml-3 text-sm font-bold text-gray-700 tracking-wide">
               Correo
             </label>
-            <input class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-gray-500" type="email" placeholder="mail@gmail.com">
+            <input id="correolg" class="w-full content-center text-base px-4 py-2 border-b rounded-2xl border-gray-300 focus:outline-none focus:border-gray-500" type="email" placeholder="mail@gmail.com">
           </div>
           <div class="relative">
             <div class="absolute right-3 mt-4" id="showPassword">
@@ -70,7 +70,7 @@
             </div>
           </div>
           <div>
-            <button type="button" class="w-full flex justify-center bg-gradient-to-r from-gray-400 to-gray-900  hover:bg-gradient-to-l hover:from-gray-500 hover:to-black text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer">
+            <button id="btnLogin" type="button" class="w-full flex justify-center bg-gradient-to-r from-gray-400 to-gray-900  hover:bg-gradient-to-l hover:from-gray-500 hover:to-black text-gray-100 p-4  rounded-full tracking-wide font-semibold  shadow-lg cursor-pointer">
               Iniciar Sesión
             </button>
           </div>
@@ -78,7 +78,7 @@
             <span>No tienes cuenta?</span>
             <a type="button" onclick="cambiarFormulario()" class="text-gray-400 hover:text-gray-500 no-underline hover:underline cursor-pointer transition ease-in duration-300">Registrarse</a>
           </p>
-        </form>
+        </div>
 
       </div>
     </div>

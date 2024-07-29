@@ -29,7 +29,7 @@
         <div id="dropdownTop" class="z-10 hidden w-44">
             <div class="grid p-2 mx-w-lg grid-cols-2 mb-2 bg-[#050708] rounded-full mx-auto">
                 <button data-modal-target="crud-ingreso" data-modal-toggle="crud-ingreso" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full text-green-500">Ingresos</button>
-                <button class="inline-flex flex-col items-center justify-center px-5 rounded-s-full text-red-500">Egresos</button>
+                <button data-modal-target="crud-egreso" data-modal-toggle="crud-egreso" class="inline-flex flex-col items-center justify-center px-5 rounded-s-full text-red-500">Egresos</button>
             </div>
         </div>
 
@@ -40,12 +40,12 @@
             <span class="sr-only">Egresos</span>
         </button>
 
-        <button type="button" class=" relleno-btn inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:text-white dark:hover:bg-gray-800 group">
+        <a type="button" class=" relleno-btn inline-flex flex-col items-center justify-center px-5 rounded-e-full hover:text-white group" href="../backend/logout.php">
             <svg class="w-6 h-6 text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
                 <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M16.444 18H19a1 1 0 0 0 1-1v-5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v5a1 1 0 0 0 1 1h2.556M17 11V5a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v6h10ZM7 15h10v4a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-4Z" />
             </svg>
 
             <span class="sr-only">Reportes</span>
-        </button>
+        </a>
     </div>
 </div>

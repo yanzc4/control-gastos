@@ -2,12 +2,12 @@
   <div class="flex justify-between pb-4 mb-4 border-b border-gray-200 dark:border-gray-700">
     <div class="flex items-center">
       <div>
-        <h5 class="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-1">Hola, Juan!</h5>
+        <h5 class="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-1">Hola, <?php echo $nombre; ?>!</h5>
         <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Buen día! 👋</p>
       </div>
     </div>
     <div>
-      <div class="w-12 h-12 rounded-lg bg-gray-100 dark:bg-gray-700 flex items-center justify-center">
+      <div class="w-12 h-12 flex items-center justify-center">
         <img class="w-full h-full rounded-full" src="../assets/images/logocg.png" alt="">
       </div>
     </div>
@@ -22,7 +22,7 @@
         </svg>
       </div>
       <div>
-        <h5 id="lblTotal" class="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-1">S./ 3,478.90</h5>
+        <h5 id="lblTotal" class="leading-none text-2xl font-bold text-gray-900 dark:text-white pb-1">7</h5>
         <p class="text-sm font-normal text-gray-500 dark:text-gray-400">Total de dinero actual</p>
       </div>
     </div>
@@ -39,11 +39,11 @@
   <div class="grid grid-cols-2">
     <dl class="flex items-center">
       <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal me-1">Ingresos:</dt>
-      <dd id="llbIngresos" class="text-gray-900 text-sm dark:text-white font-semibold">399,478.9</dd>
+      <dd id="llbIngresos" class="text-gray-900 text-sm dark:text-white font-semibold"></dd>
     </dl>
     <dl class="flex items-center justify-end">
       <dt class="text-gray-500 dark:text-gray-400 text-sm font-normal me-1">Egresos:</dt>
-      <dd id="lblEgresos" class="text-gray-900 text-sm dark:text-white font-semibold">999,999.9</dd>
+      <dd id="lblEgresos" class="text-gray-900 text-sm dark:text-white font-semibold"></dd>
     </dl>
   </div>
 

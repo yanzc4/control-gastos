@@ -55,3 +55,104 @@ function comprobarSimilitud(){
     }
 }
 
+
+//?funcion para loguear
+$(document).ready(function () {
+    $("#btnLogin").click(function () {
+        let pass = $('#password').val();
+        let email = $('#correolg').val();
+        let token = $('#tk').val();
+        $.ajax({
+            type: "POST",
+            url: "backend/loguear.php",
+            data: { pass: pass, email: email, token: token },
+            beforeSend: function() {
+                $('#btnLogin').html('Cargando...');
+                //?desabilitar boton
+                $('#btnLogin').attr('disabled', true);
+            },
+            success: function (e) {
+                $('#btnLogin').html('Iniciar sesión');
+                //?habilitar boton
+                $('#btnLogin').attr('disabled', false);
+                if (e == 0) {
+                    alertDanger("No tiene token");
+                } else if (e == 1) {
+                    alertSuccess("Logueado correctamente");
+                    window.location.href = "home";
+                } else if (e == 2) {
+                    alertWarning("Correo o contraseña incorrecta");
+                } else if (e == 3) {
+                    alertWarning("Complete los campos");
+                } else {
+                    alertDanger("Ocurrio un error");
+                }
+            },
+            error: function() {
+                $('#btnLogin').html('Iniciar sesión');
+                //?habilitar boton
+                $('#btnLogin').attr('disabled', false);
+                alertDanger("Ocurrio un error");
+            }
+        });
+        return false;
+    });
+});
+
+//?registrar
+$(document).ready(function() {
+    $("#btnRegistrarse").click(function() {
+        let nombre = $('#nombrerg').val();
+        let correo = $('#correorg').val();
+        let pass = $('#rpassword').val();
+        let passValidar = $('#rpassr').val();
+        let token = $('#tk').val();
+        if(pass != passValidar){
+            alertWarning("Las contraseñas no coinciden");
+            return false;
+        }
+        $.ajax({
+            type: "POST",
+            url: "backend/registrar.php",
+            data: { token: token, nombre: nombre, correo: correo, pass: pass},
+            beforeSend: function() {
+                $('#btnRegistrarse').html('Registrando...');
+                //?desabilitar boton
+                $('#btnRegistrarse').attr('disabled', true);
+            },
+            success: function(e) {
+                $('#btnRegistrarse').html('Registrarse');
+                //?habilitar boton
+                $('#btnRegistrarse').attr('disabled', false);
+                if (e == 1) {
+                    alertSuccess("Se registró correctamente");
+                    $('#nombreur').val('');
+                    $('#correour').val('');
+                    $('#passur').val('');
+                    $('#codur').val('');
+                    cambiarFormulario();
+                } else if (e == 2) {
+                    alertWarning("El correo ya esta registrado");
+                } else if(e == 0) {
+                    alertDanger("No tiene token");
+                } else if(e == 3) {
+                    alertWarning("Correo invalido");
+                }else if(e == 4) {
+                    alertWarning("Contraseña minimo 8 caracteres");
+                }else if(e == 5) {
+                    alertWarning("Complete los campos");
+                }else{
+                    alertDanger("Ocurrio un error");
+                }
+            },
+            error: function() {
+                $('#btnRegistrarse').html('Registrarse');
+                //?habilitar boton
+                $('#btnRegistrarse').attr('disabled', false);
+                alertDanger("Ocurrio un error");
+            }
+        });
+
+        return false;
+    });
+});
